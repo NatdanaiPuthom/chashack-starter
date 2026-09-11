@@ -38,3 +38,22 @@ footer {
  hover button {
   transition: background-color 0.3s ease;
  }
+
+ .timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    border-left: 3px solid black;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+
+.timeline-item a {
+    word-break: break-all;
+}
