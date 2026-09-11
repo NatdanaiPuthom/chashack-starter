@@ -23,7 +23,6 @@ const timelineCommits = [
         title: "Vi lade till klick button tracker",
         commit: "c14d9f8"
     },
-    ,
     {
         title: "Vi lade till layout/containers",
         commit: "0409bc3"
@@ -31,8 +30,7 @@ const timelineCommits = [
     {
         title: "Vi lade till Tisha logo",
         commit: "1455269"
-    }
-    ,
+    },
     {
         title: "Vi lade till loggboken",
         commit: "f096cd6"
