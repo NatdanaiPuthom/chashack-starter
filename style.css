@@ -1,4 +1,23 @@
 body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
+  font-family: merriweather, sans-serif; 
+  background-color: rgb(23, 22, 30); 
+  color: white;
+  margin-left: 15px;
+
+}
+
+.container  {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  
+  
+}
+
+
+footer {
+  border-top: 1px solid white;
+  margin-top: 50px;
+  padding-top: 20px;
+  color: white;
 }
