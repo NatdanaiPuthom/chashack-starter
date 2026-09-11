@@ -1,8 +1,15 @@
 // 1. Hitta knappen i HTML-dokumentet med hjälp av dess id
-const knapp = document.getElementById('myFunction');
+let timesClicked = 0;   
 
+const button = document.getElementById('myFunction');
+const textRundor = document.getElementById("timesClicked");
 function buttonPressed() {
     alert('Kopplingen fungerar! Du klickade på knappen.');
+    timesClicked++;
+    textRundor.textContent = timesClicked;
 }
 
-knapp.addEventListener('click', buttonPressed);
+button.addEventListener('click', buttonPressed);
+    
+
+
