@@ -1,0 +1,57 @@
+def gissningsspel():              # funktionen gissningsspel
+	rätt_svar = 50                # talet som ska gissas
+    antal_gissningar = 0          # räknare för antal gissningar
+
+    while True:                   # spel-loop
+        gissning = int(input("Gissa talet: "))   # spelarens gissning
+        antal_gissningar += 1                    # öka antal gissningar
+
+        if gissning < rätt_svar:                 # för lågt tal
+            print("För lågt!")
+        elif gissning > rätt_svar:               # för högt tal
+            print("För högt!")
+        else:                                    # rätt tal
+            print("Korrekt!")
+            print("Du gissade rätt på", antal_gissningar, "försök.")
+            break                                 # avsluta spelet
+
+#gissningsspel()                                   # startar spelet
+
+def Spel():                                   # funktionen Spel
+    korrekt_svar = "Bästa klassen"            # ordet som ska gissas
+    spela = True                              # spelet fortsätter
+    rätta_bokstäver = ""                      # rätt bokstäver
+    fel_bokstäver = ""                        # fel bokstäver
+    antal_fel = 0                             # antal fel
+    max_försök = 10                           # max fel man får göra
+
+    while spela:                              # spel-loop
+        gissning = input("Gissning: ")        # spelaren gissar bokstav
+
+        if gissning in korrekt_svar:          # bokstaven finns i ordet
+            print("Gissning", gissning, "är i korrekt svar")
+            rätta_bokstäver += gissning       # lägg till rätt bokstav
+
+        if gissning not in korrekt_svar:      # bokstaven finns inte
+            print("Gissning inte i korrekt svar")
+            fel_bokstäver += gissning         # lägg till fel bokstav
+            antal_fel += 1                    # öka fel
+
+        print("Korrekt:", rätta_bokstäver, "Inkorrekt:", fel_bokstäver)  # visa gissningar
+        print(max_försök - antal_fel, "av", max_försök, "försök kvar")   # visa försök kvar
+
+        
+        alla_hittade = True                   # antar att allt är hittat
+        for bokstav in korrekt_svar:          # kollar varje bokstav i ordet
+            if bokstav != " " and bokstav not in rätta_bokstäver:
+                alla_hittade = False          # hittade inte alla
+
+        if alla_hittade:                      # om alla bokstäver är hittade
+            spela = False
+            print("Du vann, korrekt svar är", korrekt_svar)
+
+        if antal_fel == max_försök:           # för många fel
+            spela = False
+            print("Du förlorade, korrekt svar är", korrekt_svar)
+
+#Spel()                                        # startar spelet
